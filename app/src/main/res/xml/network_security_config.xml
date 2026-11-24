@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Demo only. Android blocks plain HTTP by default. These two addresses reach the example back end running on your own computer:
+       10.0.2.2   the emulator's name for your computer
+       localhost  a real phone connected with "adb reverse tcp:3000 tcp:3000"
+     A real back end uses HTTPS, so delete this file (and the android:networkSecurityConfig line in AndroidManifest.xml). -->
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">10.0.2.2</domain>
+        <domain includeSubdomains="false">localhost</domain>
+    </domain-config>
+</network-security-config>
